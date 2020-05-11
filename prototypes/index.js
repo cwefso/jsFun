@@ -66,7 +66,7 @@ const kittyPrompts = {
     // },
     // ...etc]
 
-    const result = kittyPrompts.sortByAge().map(function(kitty) {
+    const result = kittyPrompts.sortByAge().map(kitty => {
       return {
         name : kitty.name,
         age : kitty.age += 2,
