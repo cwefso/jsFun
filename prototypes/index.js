@@ -1,3 +1,4 @@
+/* eslint-disable */
 const { kitties } = require('./datasets/kitties');
 const { clubs } = require('./datasets/clubs');
 const { mods } = require('./datasets/mods');
@@ -27,7 +28,14 @@ const kittyPrompts = {
 
     // Return an array of just the names of kitties who are orange e.g.
     // ['Tiger', 'Snickers']
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const orangeKitties = kitties.filter(kitty => {
+      return kitty.color === 'orange'
+    })
+
+    const result = orangeKitties.map(kitty => {
+      return kitty.name;
+    })
+    
     return result;
 
     // Annotation:
@@ -37,7 +45,7 @@ const kittyPrompts = {
   sortByAge() {
     // Sort the kitties by their age
 
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = kitties.sort((a, b) => (a.age < b.age) ? 1 : -1);
     return result;
 
     // Annotation:
@@ -58,11 +66,17 @@ const kittyPrompts = {
     // },
     // ...etc]
 
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = kittyPrompts.sortByAge().map(function(kitty) {
+      return {
+        name : kitty.name,
+        age : kitty.age += 2,
+        color : kitty.color
+      };
+    });
     return result;
-  }
-};
 
+  }
+}
 
 
 
