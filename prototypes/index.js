@@ -131,6 +131,13 @@ const clubPrompts = {
 // DATASET: mods from ./datasets/mods
 const modPrompts = {
   studentsPerMod() {
+
+    //return an array of objects
+    //object has 2 keys: 
+      //mod:
+      // studentsPerInstructor === mods.students / mods.instructors
+
+
     // Return an array of objects where the keys are mod (the number of the module)
     // and studentsPerInstructor (how many students per instructor there are for that mod) e.g.
     // [
@@ -140,7 +147,13 @@ const modPrompts = {
     //   { mod: 4, studentsPerInstructor: 8 }
     // ]
 
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = mods.map(mod => {
+      let turingMod = {}
+      turingMod.mod = mod.mod
+      turingMod.studentsPerInstructor = mod.students / mod.instructors
+      return turingMod
+    }) ;
+
     return result;
 
     // Annotation:
