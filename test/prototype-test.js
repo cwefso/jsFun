@@ -63,7 +63,7 @@ describe("PROTOTYPES", () => {
       }])
     })
   }), describe("Club Prompts", () => {
-    it("membersBelongingToClubs", () => {
+    it.only("membersBelongingToClubs", () => {
       const e = clubPrompts.membersBelongingToClubs({
         Louisa: ["Drama", "Art"],
         Pam: ["Drama", "Chess", "Newspaper"],
@@ -90,7 +90,7 @@ describe("PROTOTYPES", () => {
       })
     })
   }), describe("Mod Prompts", () => {
-    it.only("studentsPerMod", () => {
+    it("studentsPerMod", () => {
       const e = modPrompts.studentsPerMod();
       expect(e).to.deep.equal([{
         mod: 1,
