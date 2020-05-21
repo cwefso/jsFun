@@ -63,7 +63,7 @@ describe("PROTOTYPES", () => {
       }])
     })
   }), describe("Club Prompts", () => {
-    it.only("membersBelongingToClubs", () => {
+    it("membersBelongingToClubs", () => {
       const e = clubPrompts.membersBelongingToClubs({
         Louisa: ["Drama", "Art"],
         Pam: ["Drama", "Chess", "Newspaper"],
@@ -167,10 +167,10 @@ describe("PROTOTYPES", () => {
         "dutch process cocoa": 1,
         "toasted sugar": 3,
         "smoked sea salt": 3,
-        berries: 2,
+        "berries": 2,
         "edible flowers": 2,
-        mint: 1,
-        cranberry: 1,
+        "mint": 1,
+        "cranberry": 1,
         "crystallized ginger": 2
       })
     })
@@ -311,7 +311,7 @@ describe("PROTOTYPES", () => {
         'rock climbing'
       ])
     }),
-    it("getParkInEachState", () => {
+    it.only("getParkInEachState", () => {
       const e = nationalParksPrompts.getParkInEachState();
       expect(e).to.deep.equal(
         [
