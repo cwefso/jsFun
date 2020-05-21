@@ -533,8 +533,11 @@ const nationalParksPrompts = {
     // { Utah: 'Zion' },
     // { Florida: 'Everglades' } ]
 
-    const result = parkStates.reduce((acc, park) => {
-
+    const result = nationalParks.reduce((acc, park) => {
+      obj = { [park.location]: park.name}
+      acc.push(obj)
+      return acc
+    }, [])
     return result
 
     // Annotation:
