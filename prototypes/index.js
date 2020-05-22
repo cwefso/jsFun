@@ -524,25 +524,32 @@ const nationalParksPrompts = {
     // Write your annotation here as a comment
   },
 
-  getParkInEachState() { 
-    // Return an array of objects where the key is the state and the value is its National Park
-    // eg: [ { Colorado: 'Rocky Mountain' },
-    // { Wyoming: 'Yellowstone' },
-    // { Montana: 'Glacier' },
-    // { Maine: 'Acadia' },
-    // { Utah: 'Zion' },
-    // { Florida: 'Everglades' } ]
+  // getParkInEachState() { 
+  //   // Return an array of objects where the key is the state and the value is its National Park
+  //   // eg: [ { Colorado: 'Rocky Mountain' },
+  //   // { Wyoming: 'Yellowstone' },
+  //   // { Montana: 'Glacier' },
+  //   // { Maine: 'Acadia' },
+  //   // { Utah: 'Zion' },
+  //   // { Florida: 'Everglades' } ]
 
-    const result = nationalParks.reduce((acc, park) => {
-      obj = { [park.location]: park.name}
-      acc.push(obj)
-      return acc
-    }, [])
-    return result
+  //   const result = nationalParks.reduce((acc, park) => {
+  //     obj = { [park.location]: park.name}
+  //     acc.push(obj)
+  //     return acc
+  //   }, [])
+  //   return result
 
-    // Annotation:
-    // Write your annotation here as a comment
-  },
+  //     const result = cohorts.reduce((acc, cohort) => {
+  //       obj = { [cohort.cohort]: cohort.cohort}
+  //       acc.push(obj)
+  //       return acc
+  //     }, [])
+  //     return result
+
+  //   // Annotation:
+  //   // Write your annotation here as a comment
+  // },
 
   getParkActivities() {
     // Return an array of all the activities I can do
@@ -915,7 +922,10 @@ const dinosaurPrompts = {
     //   'Jurassic World: Fallen Kingdom': 18
     // }
 
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = movies.reduce((acc, movie) => {c
+      acc[movie.title] = movie.dinos.filter(dino => dinosaurs[dino].isAwesome).length
+      return acc
+    }, {})
     return result;
 
     // Annotation:
