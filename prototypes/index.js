@@ -525,13 +525,13 @@ const nationalParksPrompts = {
   },
 
   // getParkInEachState() { 
-  //   // Return an array of objects where the key is the state and the value is its National Park
-  //   // eg: [ { Colorado: 'Rocky Mountain' },
-  //   // { Wyoming: 'Yellowstone' },
-  //   // { Montana: 'Glacier' },
-  //   // { Maine: 'Acadia' },
-  //   // { Utah: 'Zion' },
-  //   // { Florida: 'Everglades' } ]
+    // Return an array of objects where the key is the state and the value is its National Park
+    // eg: [ { Colorado: 'Rocky Mountain' },
+    // { Wyoming: 'Yellowstone' },
+    // { Montana: 'Glacier' },
+    // { Maine: 'Acadia' },
+    // { Utah: 'Zion' },
+    // { Florida: 'Everglades' } ]
 
   //   const result = nationalParks.reduce((acc, park) => {
   //     obj = { [park.location]: park.name}
@@ -539,13 +539,6 @@ const nationalParksPrompts = {
   //     return acc
   //   }, [])
   //   return result
-
-  //     const result = cohorts.reduce((acc, cohort) => {
-  //       obj = { [cohort.cohort]: cohort.cohort}
-  //       acc.push(obj)
-  //       return acc
-  //     }, [])
-  //     return result
 
   //   // Annotation:
   //   // Write your annotation here as a comment
@@ -958,8 +951,14 @@ const dinosaurPrompts = {
       }
     */
 
-    const result = 'REPLACE WITH YOUR RESULT HERE';
-    return result;
+    
+
+    // const result = movies.reduce((acc, movie) => {
+    //   let obj = { [movie.director]: }
+    //   acc.push(obj)
+    //   return acc
+    // }, {});
+    // return result;
 
     // Annotation:
     // Write your annotation here as a comment

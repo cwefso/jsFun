@@ -18,11 +18,11 @@ const context = {
 
 
     // What is the value of `this` when we call ship.fly()?
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = 'global window object';
     return result;
 
     // Annotation:
-    // Write your annotation here as a comment
+    // ship exists in the global window object, so that will be the context when a method is called on ship.
   },
 
   exerciseB() {
@@ -32,11 +32,11 @@ const context = {
     }
 
     // What is the value of `this` when we call fn()?
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = 'global window object';
     return result;
 
     // Annotation:
-    // Write your annotation here as a comment
+    // fn is a function that exists on the global window object, so that is the context of 'this' when calling that function.
   },
 
   exerciseC() {
@@ -51,11 +51,11 @@ const context = {
     el.addEventListener('click', car.getInfo);
 
     // What is the value of `this` when a user clicks on our element and car.getInfo() is triggered?
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = 'el';
     return result;
 
     // Annotation:
-    // Write your annotation here as a comment
+    // 'el' is a variable with a value of an element that calls a method of car, so the context of this would 'el'
   },
 
   exerciseD() {
@@ -74,11 +74,12 @@ const context = {
     var breed = dog.getBreed();
 
     // What is the value of `this` when we call breed()?
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = 'global window object';
     return result;
 
     // Annotation:
-    // Write your annotation here as a comment
+    // A method of an object has the context of the object on which the method was called, 
+    // so since it was called on 'breed' which has the context of the global window object, 'this' should be 'global window object.'
   },
 
   exerciseE() {
@@ -90,11 +91,11 @@ const context = {
 
 
     // What is the value of `this` when we call fn()?
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = 'global window object';
     return result;
 
     // Annotation:
-    // Write your annotation here as a comment
+    // fn is a function that exists on the global window object, so that is the context of 'this' when calling that function.
   },
 
   exerciseF() {
@@ -113,11 +114,12 @@ const context = {
     const storm = new Hero('Ororo', 'weather control', true);
 
     // What is the value of `this` when we call storm.identifyHero()?
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = 'instance of Hero';
     return result;
 
     // Annotation:
-    // Write your annotation here as a comment
+    // because storm is an instance of the Hero class, a method call on the 
+    // object storm would have context of that instance of Hero.
   },
 
   exerciseG() {
@@ -141,11 +143,12 @@ const context = {
 
 
     // What is the value of `this` when we call monopoly.restart()?
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = 'global window object';
     return result;
 
     // Annotation:
-    // Write your annotation here as a comment
+    // because monopoly is an object that exists on the global window document
+    // a method called on that object has that context.
   },
 
   exerciseH() {
@@ -161,11 +164,12 @@ const context = {
     obj.method();
 
     // What is the value of `this` when we call obj.arrowFunction()?
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = 'obj';
     return result;
 
     // Annotation:
-    // Write your annotation here as a comment
+    // Because the this.arrowFunction method is a being called on method (which has a context of 'obj)
+    // the context of 'this' when we call obj.arrowFunction() is 'obj' as well.
   },
 
   exerciseI() {
@@ -184,11 +188,11 @@ const context = {
     }, poets);
 
     // What is the value of `this` that gets returned on each iteration of poets.map()?
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = 'poets';
     return result;
 
     // Annotation:
-    // Write your annotation here as a comment. Annotation should include explanation regarding the second argument of `poets` that is being passed
+    // Because .map is a method being called on 'poets', 'this' has a value of 'poets' as well.
   },
 
   exerciseJ() {
@@ -198,11 +202,11 @@ const context = {
     });
 
     // What is the value of `this` when a user clicks on our #btn element and the callback is triggered?
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = 'el';
     return result;
 
     // Annotation:
-    // Write your annotation here as a comment.
+    // Because the function is being called on 'el', 'this' has a value of 'el' as well.
   },
 
   exerciseK() {
@@ -214,11 +218,11 @@ const context = {
     };
 
     // What is the value of `this` when we call store.sellMe()?
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = 'store';
     return result;
 
     // Annotation:
-    // Write your annotation here as a comment.
+    // Because the function assigned to sellMe is being called on 'store', 'this' has a value of 'store' as well.
   },
 
   exerciseL() {
@@ -234,11 +238,11 @@ const context = {
     };
 
     // What is the value of `this` when we call dog.getBreed()?
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = 'dog';
     return result;
 
-    // Annotation:
-    // Write your annotation here as a comment
+    // Annotation: Clue on line 232
+    // Because the function assigned to getBreed is being called on 'dog', 'this' has a value of 'dog' as well.
   },
 
   exerciseM() {
@@ -257,11 +261,11 @@ const context = {
     }
 
     // What is the value of `this` when we call makeBirdNoise.call(robert);
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = 'robert';
     return result;
 
     // Annotation:
-    // Write your annotation here as a comment
+    // Because robert is being passed is, the function is being called on his object?
   },
 
   exerciseN() {
@@ -283,11 +287,12 @@ const context = {
     var firstBird = new Bird('Calvin', 'budgie');
 
     // What is the value of `this` when we call firstBird.delayNoise();
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = 'instance of Bird';
     return result;
 
     // Annotation:
-    // Write your annotation here as a comment
+    // because firstBird is an instance of the Bird class, a method call on the 
+    // 'this' for firstBird.delayNoise() would have a value of that instance of Bird.
   },
 
   exerciseO() {
@@ -299,11 +304,12 @@ const context = {
     });
 
     // What is the value of `this` when a user clicks on our button element and the callback is triggered?
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = 'global window object';
     return result;
 
     // Annotation:
-    // Write your annotation here as a comment
+    // Because the function was called on the button which has the scope of the 'global window object'
+    //, 'this' would have a value of 'global window object' as well
   },
 
   exerciseP() {
@@ -314,12 +320,13 @@ const context = {
       }
     };
 
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = 'global window object';
     return result;
 
     // What is the value of `this` when we call child.scream();
     // Annotation:
-    // Write your annotation here as a comment
+    // Because child exists on the 'global window object', a method called on child would have that same context
+    // so 'this' would have a value of 'global window object.
   }
 };
 
